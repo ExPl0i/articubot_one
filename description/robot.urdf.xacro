@@ -67,15 +67,15 @@
       </geometry>
     </collision>
   </link>
-  <!-- Chassis -->
-  <joint name="front_chassis_joint" type="revolute">
+  <!-- Steering -->
+  <joint name="front_steering_joint" type="revolute">
     <parent link="body_link"/>
     <child link="front_chassis_link"/>
     <origin rpy="1.5707963267948966 0 0" xyz="0.0721 0 -0.07465000000000001"/>
     <axis xyz="0 -1 0"/>
     <limit effort="2000" lower="-0.5235987755982988" upper="0.5235987755982988" velocity="1"/>
   </joint>
-  <link name="front_chassis_link">
+  <link name="front_steering_link">
     <!-- <visual>
             <geometry></geometry>
             <material name="chassis"/>
@@ -84,14 +84,14 @@
       <geometry>
         <cylinder length="0.225" radius="0.02"/>
       </geometry>
-      <material name="chassis"/>
+      <material name="steering"/>
     </visual>
     <visual>
       <origin rpy="-1.5707963267948966 0 0" xyz="0 0.016575 0"/>
       <geometry>
         <cylinder length="0.03315" radius="0.0115"/>
       </geometry>
-      <material name="chassis"/>
+      <material name="steering"/>
     </visual>
     <collision>
       <geometry>
@@ -105,14 +105,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="rear_chassis_joint" type="revolute">
+  <joint name="rear_steering_joint" type="revolute">
     <parent link="body_link"/>
-    <child link="rear_chassis_link"/>
+    <child link="rear_steering_link"/>
     <origin rpy="1.5707963267948966 0 0" xyz="-0.19111999999999998 0 -0.07465000000000001"/>
     <axis xyz="0 -1 0"/>
     <limit effort="2000" lower="-0.5235987755982988" upper="0.5235987755982988" velocity="1"/>
   </joint>
-  <link name="rear_chassis_link">
+  <link name="rear_steering_link">
     <!-- <visual>
             <geometry></geometry>
             <material name="chassis"/>
@@ -121,14 +121,14 @@
       <geometry>
         <cylinder length="0.225" radius="0.02"/>
       </geometry>
-      <material name="chassis"/>
+      <material name="steering"/>
     </visual>
     <visual>
       <origin rpy="-1.5707963267948966 0 0" xyz="0 0.016575 0"/>
       <geometry>
         <cylinder length="0.03315" radius="0.0115"/>
       </geometry>
-      <material name="chassis"/>
+      <material name="steering"/>
     </visual>
     <collision>
       <geometry>
@@ -144,7 +144,7 @@
   </link>
   <!-- Wheels -->
   <joint name="front_left_wheel_joint" type="continuous">
-    <parent link="front_chassis_link"/>
+    <parent link="front_steering_link"/>
     <child link="front_left_wheel_link"/>
     <origin rpy="-3.141592653589793 0 0" xyz="0 0 -0.135605"/>
     <axis xyz="0 0 1"/>
@@ -167,7 +167,7 @@
     </collision>
   </link>
   <joint name="front_right_wheel_joint" type="continuous">
-    <parent link="front_chassis_link"/>
+    <parent link="front_steering_link"/>
     <child link="front_right_wheel_link"/>
     <origin xyz="0 0 0.135605"/>
     <axis xyz="0 0 -1"/>
@@ -190,7 +190,7 @@
     </collision>
   </link>
   <joint name="rear_left_wheel_joint" type="continuous">
-    <parent link="rear_chassis_link"/>
+    <parent link="rear_steering_link"/>
     <child link="rear_left_wheel_link"/>
     <origin rpy="-3.141592653589793 0 0" xyz="0 0 -0.135605"/>
     <axis xyz="0 0 1"/>
@@ -213,7 +213,7 @@
     </collision>
   </link>
   <joint name="rear_right_wheel_joint" type="continuous">
-    <parent link="rear_chassis_link"/>
+    <parent link="rear_steering_link"/>
     <child link="rear_right_wheel_link"/>
     <origin xyz="0 0 0.135605"/>
     <axis xyz="0 0 -1"/>
