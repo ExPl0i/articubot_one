@@ -5,16 +5,16 @@
 <!-- =================================================================================== -->
 <robot name="robot">
   <material name="body">
-    <color rgba="0.05 0.05 0.05 1"/>
+    <color rgba="0.1 0.1 0.1 1"/>
   </material>
   <material name="bed">
-    <color rgba="0.05 0.05 0.05 1"/>
+    <color rgba="0.1 0.1 0.1 1"/>
   </material>
   <material name="chassis">
-    <color rgba="0.05 0.05 0.05 1"/>
+    <color rgba="0.1 0.1 0.1 1"/>
   </material>
   <material name="wheel">
-    <color rgba="0.05 0.05 0.05 1"/>
+    <color rgba="0.1 0.1 0.1 1"/>
   </material>
   <link name="base_link"/>
   <!-- Body -->
@@ -45,7 +45,7 @@
   <joint name="bed_joint" type="fixed">
     <parent link="body_link"/>
     <child link="bed_link"/>
-    <origin xyz="-0.057 0 0.0965"/>
+    <origin xyz="-0.08200000000000002 0 0.0965"/>
   </joint>
   <link name="bed_link">
     <!-- <visual>
@@ -57,28 +57,28 @@
         </visual> -->
     <visual>
       <geometry>
-        <box size="0.47 0.27 0.11"/>
+        <box size="0.52 0.27 0.11"/>
       </geometry>
       <material name="bed"/>
     </visual>
     <collision>
       <geometry>
-        <box size="0.47 0.27 0.11"/>
+        <box size="0.52 0.27 0.11"/>
       </geometry>
     </collision>
   </link>
-  <!-- Steering -->
+  <!-- Chassis -->
   <joint name="front_steering_joint" type="revolute">
     <parent link="body_link"/>
-    <child link="front_chassis_link"/>
+    <child link="front_steering_link"/>
     <origin rpy="1.5707963267948966 0 0" xyz="0.0721 0 -0.07465000000000001"/>
     <axis xyz="0 -1 0"/>
-    <limit effort="2000" lower="-0.5235987755982988" upper="0.5235987755982988" velocity="1"/>
+    <limit effort="1" lower="-0.3490658503988659" upper="0.3490658503988659" velocity="1"/>
   </joint>
   <link name="front_steering_link">
     <!-- <visual>
             <geometry></geometry>
-            <material name="chassis"/>
+            <material name="steering"/>
         </visual> -->
     <visual>
       <geometry>
@@ -110,12 +110,12 @@
     <child link="rear_steering_link"/>
     <origin rpy="1.5707963267948966 0 0" xyz="-0.19111999999999998 0 -0.07465000000000001"/>
     <axis xyz="0 -1 0"/>
-    <limit effort="2000" lower="-0.5235987755982988" upper="0.5235987755982988" velocity="1"/>
+    <limit effort="1" lower="-0.3490658503988659" upper="0.3490658503988659" velocity="1"/>
   </joint>
   <link name="rear_steering_link">
     <!-- <visual>
             <geometry></geometry>
-            <material name="chassis"/>
+            <material name="steering"/>
         </visual> -->
     <visual>
       <geometry>

@@ -7,8 +7,10 @@
                 <plugin>diffdrive_arduino/DiffDriveArduino</plugin>
                 <param name="front_steering_name">front_steering_joint</param>
                 <param name="rear_steering_name">rear_steering_joint</param>
-                <param name="front_wheels_name">front_wheels_joint</param>
-                <param name="rear_wheels_name">rear_wheel_joint</param>
+                <param name="front_left_wheel_name">front_left_wheel_joint</param>
+                <param name="front_right_wheel_name">front_right_wheel_joint</param>
+                <param name="rear_left_wheel_name">rear_left_wheel_joint</param>
+                <param name="rear_right_wheel_name">reae_right_wheel_joint</param>
                 <param name="loop_rate">30</param>
                 <param name="device">/dev/ttyUSB0</param>
                 <param name="baud_rate">57600</param>
