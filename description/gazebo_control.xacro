@@ -2,22 +2,31 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <gazebo>
-        <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
-            <topic>joint_states</topic>
-            <joint_name>front_steering_joint</joint_name>
-            <joint_name>rear_steering_joint</joint_name>
-            <joint_name>front_wheels_joint</joint_name>
-            <joint_name>rear_wheels_joint</joint_name>
-        </plugin>
+        <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+    
+    
+            <!-- Инфа о колёсах -->
+            <left_joint>left_wheel_joint</left_joint>
+            <right_joint>right_wheel_joint</right_joint>
+            <wheel_separation>0.275</wheel_separation>
+            <wheel_diameter>0.125</wheel_diameter>
+    
 
-        <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-            <parameters>$(find ackermann_steering_vehicle)/config/gz_ros2_control.yaml</parameters>
-        </plugin>
+            <!-- Ограничения -->
+            <max_wheel_torque>200</max_wheel_torque>
+            <max_wheel_acceleration>30.0</max_wheel_acceleration>
+    
 
-        <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
-            <render_engine>ogre2</render_engine>
+            <!-- Вывод в -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+    
+    
         </plugin>
     </gazebo>
-
 
 </robot>

@@ -1,0 +1,19 @@
+scan_filter:
+  ros__parameters:
+    filter1:
+      name: angular_bounds_filter
+      type: laser_filters/LaserScanAngularBoundsFilter
+      params:
+        lower_angle: -0.91  # Углы (-52 градуса)
+        upper_angle: 0.91   # Углы (52 градуса)
+
+    filter2:
+      name: range_filter
+      type: laser_filters/LaserScanRangeFilter
+      params:
+        lower_threshold: 0.1   # Минимальная дистанция
+        upper_threshold: 10.0  # Максимальная дистанция
+        
+    lidar_settings:
+      horizontal:
+        samples: 180  # Количество выборок

@@ -1,0 +1,97 @@
+[INFO] [launch]: All log files can be found below /home/user/.ros/log/2024-07-12-13-24-47-679934-ubuntu-111471
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [111474]
+[INFO] [twist_mux-2]: process started with pid [111476]
+[INFO] [gzserver-3]: process started with pid [111478]
+[INFO] [gazebo_params.yaml-4]: process started with pid [111481]
+[INFO] [spawn_entity.py-5]: process started with pid [111485]
+[INFO] [spawner.py-6]: process started with pid [111496]
+[INFO] [spawner.py-7]: process started with pid [111506]
+[robot_state_publisher-1] Parsing robot urdf xml string.
+[robot_state_publisher-1] Link base_footprint had 0 children
+[robot_state_publisher-1] Link body_link had 3 children
+[robot_state_publisher-1] Link body_up_link had 3 children
+[robot_state_publisher-1] Link camera_link had 0 children
+[robot_state_publisher-1] Link laser_frame had 0 children
+[robot_state_publisher-1] Link park_link had 0 children
+[robot_state_publisher-1] Link left_wheel_front_link_to_wheel had 1 children
+[robot_state_publisher-1] Link left_wheel_front_link had 0 children
+[robot_state_publisher-1] Link right_wheel_front_link_to_wheel had 1 children
+[robot_state_publisher-1] Link right_wheel_front_link had 0 children
+[robot_state_publisher-1] Link left_wheel_link had 0 children
+[robot_state_publisher-1] Link right_wheel_link had 0 children
+[robot_state_publisher-1] [INFO] [1720765490.792878019] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1720765490.793211172] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1720765490.793282020] [robot_state_publisher]: got segment body_link
+[robot_state_publisher-1] [INFO] [1720765490.793318692] [robot_state_publisher]: got segment body_up_link
+[robot_state_publisher-1] [INFO] [1720765490.793354276] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-1] [INFO] [1720765490.793387044] [robot_state_publisher]: got segment laser_frame
+[robot_state_publisher-1] [INFO] [1720765490.793418916] [robot_state_publisher]: got segment left_wheel_front_link
+[robot_state_publisher-1] [INFO] [1720765490.793449220] [robot_state_publisher]: got segment left_wheel_front_link_to_wheel
+[robot_state_publisher-1] [INFO] [1720765490.793480549] [robot_state_publisher]: got segment left_wheel_link
+[robot_state_publisher-1] [INFO] [1720765490.793515141] [robot_state_publisher]: got segment park_link
+[robot_state_publisher-1] [INFO] [1720765490.793548709] [robot_state_publisher]: got segment right_wheel_front_link
+[robot_state_publisher-1] [INFO] [1720765490.793578917] [robot_state_publisher]: got segment right_wheel_front_link_to_wheel
+[robot_state_publisher-1] [INFO] [1720765490.793612933] [robot_state_publisher]: got segment right_wheel_link
+[twist_mux-2] [INFO] [1720765490.773552853] [twist_mux]: Topic handler 'topics.joystick' subscribed to topic 'cmd_vel_joy': timeout = 0.500000s , priority = 100.
+[twist_mux-2] [INFO] [1720765490.774970776] [twist_mux]: Topic handler 'topics.navigation' subscribed to topic 'cmd_vel': timeout = 0.500000s , priority = 10.
+[spawner.py-6] [INFO] [1720765491.802484175] [spawner_diff_cont]: Waiting for /controller_manager services
+[spawner.py-7] [INFO] [1720765491.950676337] [spawner_joint_broad]: Waiting for /controller_manager services
+[spawn_entity.py-5] [INFO] [1720765492.942372178] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-5] [INFO] [1720765492.944136182] [spawn_entity]: Loading entity published on topic robot_description
+[spawn_entity.py-5] [INFO] [1720765492.951515528] [spawn_entity]: Waiting for entity xml on robot_description
+[spawn_entity.py-5] [INFO] [1720765492.968842897] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-5] [INFO] [1720765492.970524469] [spawn_entity]: Waiting for service /spawn_entity
+[spawner.py-6] [INFO] [1720765493.828258580] [spawner_diff_cont]: Waiting for /controller_manager services
+[spawner.py-7] [INFO] [1720765494.006281853] [spawner_joint_broad]: Waiting for /controller_manager services
+[spawn_entity.py-5] [INFO] [1720765495.243649766] [spawn_entity]: Calling service /spawn_entity
+[spawner.py-6] [INFO] [1720765495.882830554] [spawner_diff_cont]: Waiting for /controller_manager services
+[spawner.py-7] [INFO] [1720765496.052570095] [spawner_joint_broad]: Waiting for /controller_manager services
+[gzserver-3] [INFO] [1720765496.987998853] [camera_controller]: Publishing camera info to [/camera/camera_info]
+[spawn_entity.py-5] [INFO] [1720765497.067061506] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [my_bot]
+[gzserver-3] [INFO] [1720765497.306103388] [gazebo_ros2_control]: Loading gazebo_ros2_control plugin
+[gzserver-3] [INFO] [1720765497.315599282] [gazebo_ros2_control]: Starting gazebo_ros2_control plugin in namespace: /
+[gzserver-3] [INFO] [1720765497.315814419] [gazebo_ros2_control]: Starting gazebo_ros2_control plugin in ros 2 node: gazebo_ros2_control
+[gzserver-3] [INFO] [1720765497.316059123] [gazebo_ros2_control]: Loading parameter files /home/user/dev_ws/install/articubot_one/share/articubot_one/config/my_controllers.yaml
+[gzserver-3] [INFO] [1720765497.323197668] [gazebo_ros2_control]: connected to service!! robot_state_publisher
+[gzserver-3] [INFO] [1720765497.326319244] [gazebo_ros2_control]: Recieved urdf from param server, parsing...
+[gzserver-3] [INFO] [1720765497.368569808] [gazebo_ros2_control]: Loading joint: left_wheel_joint
+[gzserver-3] [INFO] [1720765497.368823057] [gazebo_ros2_control]: 	State:
+[gzserver-3] [INFO] [1720765497.368895953] [gazebo_ros2_control]: 		 position
+[gzserver-3] [INFO] [1720765497.369066194] [gazebo_ros2_control]: 		 velocity
+[gzserver-3] [INFO] [1720765497.369121714] [gazebo_ros2_control]: 	Command:
+[gzserver-3] [INFO] [1720765497.369158162] [gazebo_ros2_control]: 		 velocity
+[gzserver-3] [INFO] [1720765497.369326674] [gazebo_ros2_control]: Loading joint: right_wheel_joint
+[gzserver-3] [INFO] [1720765497.369385138] [gazebo_ros2_control]: 	State:
+[gzserver-3] [INFO] [1720765497.369420786] [gazebo_ros2_control]: 		 velocity
+[gzserver-3] [INFO] [1720765497.369453555] [gazebo_ros2_control]: 		 position
+[gzserver-3] [INFO] [1720765497.369492883] [gazebo_ros2_control]: 	Command:
+[gzserver-3] [INFO] [1720765497.369524147] [gazebo_ros2_control]: 		 velocity
+[gzserver-3] [INFO] [1720765497.370634357] [gazebo_ros2_control]: Loading controller_manager
+[gzserver-3] [WARN] [1720765497.433111050] [gazebo_ros2_control]:  Desired controller update period (0.0333333 s) is slower than the gazebo simulation period (0.001 s).
+[gzserver-3] [INFO] [1720765497.433565867] [gazebo_ros2_control]: Loaded gazebo_ros2_control.
+[gzserver-3] [INFO] [1720765497.527613643] [controller_manager]: Loading controller 'joint_broad'
+[gzserver-3] [INFO] [1720765497.647563017] [controller_manager]: Setting use_sim_time=True for joint_broad to match controller manager (see ros2_control#325 for details)
+[INFO] [spawn_entity.py-5]: process has finished cleanly [pid 111485]
+[spawner.py-7] [INFO] [1720765497.663299887] [spawner_joint_broad]: [94mLoaded joint_broad[0m
+[gzserver-3] [INFO] [1720765497.678937332] [controller_manager]: Loading controller 'diff_cont'
+[gzserver-3] [INFO] [1720765497.789243867] [controller_manager]: Setting use_sim_time=True for diff_cont to match controller manager (see ros2_control#325 for details)
+[spawner.py-6] [INFO] [1720765497.824240206] [spawner_diff_cont]: [94mLoaded diff_cont[0m
+[gzserver-3] [INFO] [1720765497.824927952] [controller_manager]: Configuring controller 'joint_broad'
+[gzserver-3] [INFO] [1720765497.852787698] [controller_manager]: Configuring controller 'diff_cont'
+[spawner.py-7] [INFO] [1720765497.960815284] [spawner_joint_broad]: [92mConfigured and started [96mjoint_broad[0m
+[spawner.py-6] [INFO] [1720765497.994917093] [spawner_diff_cont]: [92mConfigured and started [96mdiff_cont[0m
+[INFO] [spawner.py-7]: process has finished cleanly [pid 111506]
+[INFO] [spawner.py-6]: process has finished cleanly [pid 111496]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[twist_mux-2] [INFO] [1720765527.727507264] [rclcpp]: signal_handler(signal_value=2)
+[INFO] [gazebo_params.yaml-4]: sending signal 'SIGINT' to process[gazebo_params.yaml-4]
+[INFO] [gzserver-3]: sending signal 'SIGINT' to process[gzserver-3]
+[INFO] [twist_mux-2]: sending signal 'SIGINT' to process[twist_mux-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[ERROR] [twist_mux-2]: process has died [pid 111476, exit code -2, cmd '/opt/ros/foxy/lib/twist_mux/twist_mux --ros-args --params-file /home/user/dev_ws/install/articubot_one/share/articubot_one/config/twist_mux.yaml --params-file /tmp/launch_params_eadpv818 -r /cmd_vel_out:=/diff_cont/cmd_vel_unstamped'].
+[robot_state_publisher-1] [INFO] [1720765527.733321997] [rclcpp]: signal_handler(signal_value=2)
+[robot_state_publisher-1] [INFO] [1720765527.789246545] [rclcpp]: signal_handler(signal_value=2)
+[ERROR] [gazebo_params.yaml-4]: process has died [pid 111481, exit code -2, cmd 'gzclient   --ros-args --params-file /home/user/dev_ws/install/articubot_one/share/articubot_one/config/gazebo_params.yaml'].
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 111474]
+[ERROR] [gzserver-3]: process has died [pid 111478, exit code -2, cmd 'gzserver ./src/articubot_one/worlds/obstacles.world                                                                      -s libgazebo_ros_init.so   -s libgazebo_ros_factory.so   -s libgazebo_ros_force_system.so       --ros-args --params-file /home/user/dev_ws/install/articubot_one/share/articubot_one/config/gazebo_params.yaml'].

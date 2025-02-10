@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:property name="camera_radius" value="0.0145"/>
+    <xacro:property name="camera_length" value="0.04"/>
+    <xacro:property name="camera_offset_z" value="0.045"/>
+    <xacro:property name="camera_update_rate" value="10"/>
+    <xacro:property name="camera_fov" value="${49.29*pi/180}"/>
+    <xacro:property name="camera_image_width" value="2448"/>
+    <xacro:property name="camera_image_height" value="2048"/>
+    <xacro:property name="camera_mass" value="0.2"/>
+
+    <material name="camera">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <joint name="front_camera_joint" type="fixed">
+        <parent link="tower"/>
+        <child link="front_camera"/>
+        <origin xyz="${tower_width/2+camera_length/2} 0 ${tower_height/2-camera_offset_z}"/>
+    </joint>
+    <link name="front_camera">
+        <visual>
+            <origin rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+            <material name="camera"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${camera_mass}" radius="${camera_radius}" length="${camera_length}">
+            <origin rpy="0 ${pi/2} 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="back_camera_joint" type="fixed">
+        <parent link="tower"/>
+        <child link="back_camera"/>
+        <origin xyz="-${tower_width/2+camera_length/2} 0 ${tower_height/2-camera_offset_z}"/>
+    </joint>
+    <link name="back_camera">
+        <visual>
+            <origin rpy="0 -${pi/2} 0"/>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+            <material name="camera"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${camera_mass}" radius="${camera_radius}" length="${camera_length}">
+            <origin rpy="0 -${pi/2} 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="left_camera_joint" type="fixed">
+        <parent link="tower"/>
+        <child link="left_camera"/>
+        <origin xyz="0 ${tower_width/2+camera_length/2} ${tower_height/2-camera_offset_z}"/>
+    </joint>
+    <link name="left_camera">
+        <visual>
+            <origin rpy="-${pi/2} 0 0"/>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+            <material name="camera"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${camera_mass}" radius="${camera_radius}" length="${camera_length}">
+            <origin rpy="-${pi/2} 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="right_camera_joint" type="fixed">
+        <parent link="tower"/>
+        <child link="right_camera"/>
+        <origin xyz="0 -${tower_width/2+camera_length/2} ${tower_height/2-camera_offset_z}"/>
+    </joint>
+    <link name="right_camera">
+        <visual>
+            <origin rpy="${pi/2} 0 0"/>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+            <material name="camera"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${camera_radius}" length="${camera_length}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${camera_mass}" radius="${camera_radius}" length="${camera_length}">
+            <origin rpy="${pi/2} 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+</robot>
